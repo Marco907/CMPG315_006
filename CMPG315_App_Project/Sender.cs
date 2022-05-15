@@ -72,7 +72,7 @@ namespace CMPG315_App_Project
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Lost connection");
             }
         }
 
