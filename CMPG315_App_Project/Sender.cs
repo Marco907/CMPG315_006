@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CMPG315_App_Project
 {
-    public partial class Contacts : Form
+    public partial class Sender : Form
     {
-        public Contacts()
+        public Sender()
         {
             InitializeComponent();
         }
