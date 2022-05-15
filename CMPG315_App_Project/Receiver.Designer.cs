@@ -97,7 +97,7 @@ namespace CMPG315_App_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 602);
+            this.ClientSize = new System.Drawing.Size(820, 603);
             this.Controls.Add(this.btnReceiverSend);
             this.Controls.Add(this.lblRMessage);
             this.Controls.Add(this.txtRType);
