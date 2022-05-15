@@ -16,5 +16,11 @@ namespace CMPG315_App_Project
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Sender frm = new Sender();
+            frm.Show();
+        }
     }
 }
