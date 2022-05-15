@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CMPG315_App_Project
 {
-    public partial class Form1 : Form
+    public partial class frm1 : Form
     {
-        public Form1()
+        public frm1()
         {
             InitializeComponent();
         }
