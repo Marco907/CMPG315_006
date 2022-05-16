@@ -83,7 +83,7 @@ namespace CMPG315_App_Project
                 try
                 {
                     recievedMessage = STR.ReadLine();
-                    this.Invoke((MethodInvoker)delegate { tbxScreen.AppendText("\r\nYou: " + recievedMessage ); }); // verandeer \r\n na you to \n
+                    this.Invoke((MethodInvoker)delegate { tbxScreen.AppendText("\r\nYou: " + recievedMessage ); }); 
                     recievedMessage = "";
                 }
                 catch (Exception)
@@ -99,7 +99,7 @@ namespace CMPG315_App_Project
             if (client.Connected)
             {
                 STW.WriteLine(textToSend);
-                this.tbxScreen.Invoke((MethodInvoker)delegate { tbxScreen.AppendText("\r\nMe: " + textToSend); });// verandeer \r\n na me to \n
+                this.tbxScreen.Invoke((MethodInvoker)delegate { tbxScreen.AppendText("\r\nMe: " + textToSend); });
             }
             else
             {
