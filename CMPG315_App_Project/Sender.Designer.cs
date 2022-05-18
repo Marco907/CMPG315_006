@@ -31,7 +31,6 @@ namespace CMPG315_App_Project
         {
             this.lblSenderIP = new System.Windows.Forms.Label();
             this.txtServerIP = new System.Windows.Forms.TextBox();
-            this.tbxScreen = new System.Windows.Forms.TextBox();
             this.lblTMessage = new System.Windows.Forms.Label();
             this.txtTypeMessage = new System.Windows.Forms.TextBox();
             this.btnSenderSend = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace CMPG315_App_Project
             this.label3 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.lbxScreen = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblSenderIP
@@ -67,16 +67,6 @@ namespace CMPG315_App_Project
             this.txtServerIP.Name = "txtServerIP";
             this.txtServerIP.Size = new System.Drawing.Size(198, 37);
             this.txtServerIP.TabIndex = 1;
-            // 
-            // tbxScreen
-            // 
-            this.tbxScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxScreen.Location = new System.Drawing.Point(56, 162);
-            this.tbxScreen.Margin = new System.Windows.Forms.Padding(2);
-            this.tbxScreen.Multiline = true;
-            this.tbxScreen.Name = "tbxScreen";
-            this.tbxScreen.Size = new System.Drawing.Size(654, 301);
-            this.tbxScreen.TabIndex = 2;
             // 
             // lblTMessage
             // 
@@ -202,11 +192,20 @@ namespace CMPG315_App_Project
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
+            // lbxScreen
+            // 
+            this.lbxScreen.FormattingEnabled = true;
+            this.lbxScreen.Location = new System.Drawing.Point(40, 159);
+            this.lbxScreen.Name = "lbxScreen";
+            this.lbxScreen.Size = new System.Drawing.Size(822, 290);
+            this.lbxScreen.TabIndex = 14;
+            // 
             // Sender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 615);
+            this.Controls.Add(this.lbxScreen);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.tbxClientPort);
@@ -218,7 +217,6 @@ namespace CMPG315_App_Project
             this.Controls.Add(this.btnSenderSend);
             this.Controls.Add(this.txtTypeMessage);
             this.Controls.Add(this.lblTMessage);
-            this.Controls.Add(this.tbxScreen);
             this.Controls.Add(this.txtServerIP);
             this.Controls.Add(this.lblSenderIP);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -234,7 +232,6 @@ namespace CMPG315_App_Project
 
         private System.Windows.Forms.Label lblSenderIP;
         private System.Windows.Forms.TextBox txtServerIP;
-        private System.Windows.Forms.TextBox tbxScreen;
         private System.Windows.Forms.Label lblTMessage;
         private System.Windows.Forms.TextBox txtTypeMessage;
         private System.Windows.Forms.Button btnSenderSend;
@@ -248,5 +245,6 @@ namespace CMPG315_App_Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.ListBox lbxScreen;
     }
 }
