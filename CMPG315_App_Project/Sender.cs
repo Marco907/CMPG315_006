@@ -156,22 +156,7 @@ namespace CMPG315_App_Project
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-<<<<<<< HEAD
-            while (client.Connected)
-            {
-                try
-                {
-                    recievedMessage = STR.ReadLine();
-                    this.Invoke((MethodInvoker)delegate { tbxScreen.AppendText("\r\nYou: " + recievedMessage ); }); 
-                    recievedMessage = "";
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Lost connection");
-                    break;
-                }
-            }  
-=======
+
             /* while (client.Connected)
              {
                  try
@@ -187,7 +172,6 @@ namespace CMPG315_App_Project
                  }
              }
              */
->>>>>>> Back-end
         }
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
