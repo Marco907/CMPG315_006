@@ -63,15 +63,17 @@ namespace CMPG315_App_Project
         {
             try
             {
-                Socket Socket = (Socket)aResult.AsyncState; // probleem
+                //Socket Socket = (Socket)aResult.AsyncState; // probleem
                 int size = Socket.EndReceiveFrom(aResult, ref Remote);
                 if (size > 0)
                 {
                     byte[] recievedData = new byte[1464];
+                    
                     recievedData = (byte[])aResult.AsyncState;
+                    
                     ASCIIEncoding eEncoding = new ASCIIEncoding();
                     string recievedMessage = eEncoding.GetString(recievedData);
-                    tbxScreen.AppendText("Friend: " + recievedMessage);
+                    lbxScreen.Items.Add("Friend: " + recievedMessage); 
                 }
                 byte[] buffer = new byte[1500]; 
                 Socket.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote, new AsyncCallback(MessageCallBack), buffer);
@@ -203,7 +205,7 @@ namespace CMPG315_App_Project
                 msg = enc.GetBytes(txtTypeMessage.Text);
                 Socket.Send(msg);
 
-                tbxScreen.AppendText("Me: " + txtTypeMessage.Text + "\n");
+                lbxScreen.Items.Add("Me: " + txtTypeMessage.Text + "\n");
                 txtTypeMessage.Text = "";
             }
             catch (Exception ex)
