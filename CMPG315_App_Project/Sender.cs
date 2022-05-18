@@ -42,7 +42,7 @@ namespace CMPG315_App_Project
             Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
             txtServerIP.Text = getLocalIP();
-            tbxCleintIP.Text = getLocalIP();// gaan later uithaal
+            tbxCleintIP.Text = getLocalIP();
         }
 
         private string getLocalIP()
