@@ -73,7 +73,10 @@ namespace CMPG315_App_Project
                     
                     ASCIIEncoding eEncoding = new ASCIIEncoding();
                     string recievedMessage = eEncoding.GetString(recievedData);
-                    lbxScreen.Items.Add("Friend: " + recievedMessage); 
+                    this.lbxScreen.Invoke(new MethodInvoker(delegate ()
+                    {
+                        lbxScreen.Items.Add("Recieved: " + recievedMessage);
+                    }));
                 }
                 byte[] buffer = new byte[1500]; 
                 Socket.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote, new AsyncCallback(MessageCallBack), buffer);
@@ -116,7 +119,7 @@ namespace CMPG315_App_Project
                 byte[] buffer = new byte[1500];
                 Socket.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote, new AsyncCallback(MessageCallBack), buffer);
 
-                btnConnect.Text = "Connected";
+                btnStart.Text = "Connected";
                 btnStart.Enabled = false;
                 txtTypeMessage.Focus();
             }
