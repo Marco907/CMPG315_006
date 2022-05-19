@@ -25,9 +25,10 @@ namespace TCPServer
         private void frm1_Load(object sender, EventArgs e)
         {
             
-            var vPort = int.Parse(txtPort.Text);
+            var vIP = getLocalIP() + ":9000";
+            txtIP.Text = vIP;
             btnSend.Enabled = false;
-            server = new SimpleTcpServer(getLocalIP(), vPort);
+            server = new SimpleTcpServer(vIP);
             server.Events.ClientConnected += Events_ClientConnected;
             server.Events.ClientDisconnected += Events_ClientDisconnected;
             server.Events.DataReceived += Events_DataReceived;

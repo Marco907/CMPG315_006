@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,8 +24,9 @@ namespace CMPG315_App_Project
 
         private void frm1_Load(object sender, EventArgs e)
         {
-            var vPort = int.Parse(txtPort.Text)+1;
-            client = new SimpleTcpClient(txtIP.Text, vPort);
+            
+            
+            client = new SimpleTcpClient(txtIP.Text);
             client.Events.Connected += Events_Connected;
             client.Events.Disconnected += Events_Disconnected;
             client.Events.DataReceived += Events_dataReceived;
@@ -34,7 +37,7 @@ namespace CMPG315_App_Project
         {
             this.Invoke((MethodInvoker)delegate
             {
-                txtIP.Text += $"Server:{Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+                txtInfo.Text += $"Server:{Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
             });
         }
 
@@ -42,7 +45,7 @@ namespace CMPG315_App_Project
         {
             this.Invoke((MethodInvoker)delegate
             {
-                txtIP.Text += $"Server disconnected.{Environment.NewLine}";
+                txtInfo.Text += $"Server disconnected.{Environment.NewLine}";
             });
             
         }
@@ -51,7 +54,7 @@ namespace CMPG315_App_Project
         {
             this.Invoke((MethodInvoker)delegate
             {
-                txtIP.Text += $"Server connected.{Environment.NewLine}";
+                txtInfo.Text += $"Server connected.{Environment.NewLine}";
             });
             
         }
@@ -79,7 +82,7 @@ namespace CMPG315_App_Project
                 if (!string.IsNullOrEmpty(txtMessage.Text))
                 {
                     client.Send(Encoding.UTF8.GetBytes(txtMessage.Text));
-                    txtIP.Text += $"Me: {txtMessage.Text}{Environment.NewLine}";
+                    txtInfo.Text += $"Me: {txtMessage.Text}{Environment.NewLine}";
                     txtMessage.Text = "";
                 }
             }
