@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A6B923A-4E89-44CA-BFFB-946743267DCE}</ProjectGuid>
+    <ProjectGuid>{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CMPG315_App_Project</RootNamespace>
-    <AssemblyName>CMPG315_App_Project</AssemblyName>
+    <RootNamespace>TCPServer</RootNamespace>
+    <AssemblyName>TCPServer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,7 +38,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel.Activities" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sender.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sender.Designer.cs">
-      <DependentUpon>Sender.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,9 +57,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Sender.resx">
-      <DependentUpon>Sender.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

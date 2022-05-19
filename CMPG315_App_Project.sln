@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMPG315_App_Project", "CMPG315_App_Project\CMPG315_App_Project.csproj", "{4A6B923A-4E89-44CA-BFFB-946743267DCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer", "TCPServer\TCPServer.csproj", "{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4A6B923A-4E89-44CA-BFFB-946743267DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A6B923A-4E89-44CA-BFFB-946743267DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A6B923A-4E89-44CA-BFFB-946743267DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A03AC8B-4CE5-4B7E-9BB4-553B9C346A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
