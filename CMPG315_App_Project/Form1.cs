@@ -87,5 +87,12 @@ namespace CMPG315_App_Project
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sender sender1 = new Sender();
+            sender1.Show();
+            this.Hide();
+        }
     }
 }

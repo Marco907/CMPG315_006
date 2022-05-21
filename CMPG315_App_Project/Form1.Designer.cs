@@ -35,14 +35,14 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(574, 406);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConnect.Location = new System.Drawing.Point(383, 264);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(112, 35);
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -50,40 +50,36 @@
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(98, 86);
-            this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInfo.Location = new System.Drawing.Point(65, 56);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtInfo.Size = new System.Drawing.Size(538, 242);
+            this.txtInfo.Size = new System.Drawing.Size(360, 159);
             this.txtInfo.TabIndex = 4;
             this.txtInfo.Text = " ";
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(100, 339);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMessage.Location = new System.Drawing.Point(67, 220);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(536, 26);
+            this.txtMessage.Size = new System.Drawing.Size(359, 20);
             this.txtMessage.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 344);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(11, 224);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Message";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(434, 406);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSend.Location = new System.Drawing.Point(289, 264);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(112, 35);
+            this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 7;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -91,28 +87,37 @@
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(98, 46);
-            this.txtIP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIP.Location = new System.Drawing.Point(65, 30);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(536, 26);
+            this.txtIP.Size = new System.Drawing.Size(359, 20);
             this.txtIP.TabIndex = 13;
-            this.txtIP.Text = "192.168.0.2:9000";
+            this.txtIP.Text = "192.168.0.5:9000";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(23, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Server";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(76, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Individual chat";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 480);
+            this.ClientSize = new System.Drawing.Size(480, 312);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSend);
@@ -120,6 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.btnConnect);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frm1";
             this.Text = "Client";
@@ -137,6 +143,7 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
