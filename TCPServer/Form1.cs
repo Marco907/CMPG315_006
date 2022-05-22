@@ -51,26 +51,69 @@ namespace TCPServer
 
         private void Events_DataReceived(object sender, DataReceivedEventArgs e)
         {
+            var vMessage = "";
             this.Invoke((MethodInvoker)delegate
             {
-                txtInfo.Text += $"{e.IpPort}: {Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+                vMessage += $"{e.IpPort}: {Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+                txtInfo.Text += vMessage;
+                
+                
+                if (lstClientIP.Items.Count > 1)
+                {
+                    for (int i = 0; i < lstClientIP.Items.Count; i++)
+                    {
+                        var vIP = lstClientIP.Items[i].ToString();
+                        if (vIP != e.IpPort)
+                        {
+                            server.Send(vIP, vMessage);
+                        }
+                    }
+                }
+                
             });
         }
 
         private void Events_ClientDisconnected(object sender, ConnectionEventArgs e)
         {
+            var vMessage = "";
             this.Invoke((MethodInvoker)delegate
             {
-                txtInfo.Text += $"{e.IpPort} disconnected{Environment.NewLine}";
+                vMessage += $"{e.IpPort} disconnected{Environment.NewLine}";
+                txtInfo.Text += vMessage;
+                
+                if (lstClientIP.Items.Count > 1)
+                {
+                    for (int i = 0; i < lstClientIP.Items.Count; i++)
+                    {
+                        var vIP = lstClientIP.Items[i].ToString();
+                        if (vIP != e.IpPort)
+                        {
+                            server.Send(vIP, vMessage);
+                        }
+                    }
+                }
                 lstClientIP.Items.Remove(e.IpPort);
             });
         }
 
         private void Events_ClientConnected(object sender, ConnectionEventArgs e)
         {
+            var vMessage = "";
             this.Invoke((MethodInvoker)delegate
             {
-                txtInfo.Text += $"{e.IpPort} connected{Environment.NewLine}";
+                vMessage += $"{e.IpPort} connected{Environment.NewLine}";
+                txtInfo.Text += vMessage;
+                if (lstClientIP.Items.Count >=0)
+                {
+                    for (int i = 0; i < lstClientIP.Items.Count; i++)
+                    {
+                        var vIP = lstClientIP.Items[i].ToString();
+                        if (vIP != e.IpPort)
+                        {
+                            server.Send(vIP, vMessage);
+                        }
+                    }
+                }
                 lstClientIP.Items.Add(e.IpPort);
             });
             
@@ -93,7 +136,7 @@ namespace TCPServer
                 if (!string.IsNullOrEmpty(txtMessage.Text) && lstClientIP.SelectedItem != null)
                 {
                     server.Send(lstClientIP.SelectedItem.ToString(), txtMessage.Text);
-                    txtInfo.Text += $"Server: {txtMessage.Text}{Environment.NewLine}";
+                    txtInfo.Text += $"{txtMessage.Text}{Environment.NewLine}";
                     txtMessage.Text = string.Empty;
                 }
             }
