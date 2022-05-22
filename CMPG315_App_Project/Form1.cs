@@ -94,5 +94,10 @@ namespace CMPG315_App_Project
             sender1.Show();
             this.Hide();
         }
+
+        private void txtIP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

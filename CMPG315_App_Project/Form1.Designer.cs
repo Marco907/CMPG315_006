@@ -40,83 +40,108 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(383, 264);
+            this.btnConnect.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnConnect.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.Location = new System.Drawing.Point(293, 358);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.Size = new System.Drawing.Size(100, 28);
             this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(65, 56);
+            this.txtInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtInfo.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfo.Location = new System.Drawing.Point(131, 98);
+            this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtInfo.Size = new System.Drawing.Size(360, 159);
+            this.txtInfo.Size = new System.Drawing.Size(479, 195);
             this.txtInfo.TabIndex = 4;
             this.txtInfo.Text = " ";
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(67, 220);
+            this.txtMessage.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessage.Location = new System.Drawing.Point(130, 301);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(359, 20);
+            this.txtMessage.Size = new System.Drawing.Size(480, 23);
             this.txtMessage.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 224);
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(44, 303);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Message";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(289, 264);
+            this.btnSend.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSend.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Location = new System.Drawing.Point(510, 332);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(100, 28);
             this.btnSend.TabIndex = 7;
             this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(65, 30);
+            this.txtIP.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIP.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIP.Location = new System.Drawing.Point(131, 67);
+            this.txtIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(359, 20);
+            this.txtIP.Size = new System.Drawing.Size(480, 23);
             this.txtIP.TabIndex = 13;
             this.txtIP.Text = "192.168.0.5:9000";
+            this.txtIP.TextChanged += new System.EventHandler(this.txtIP_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 32);
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(64, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Server";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(76, 264);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Font = new System.Drawing.Font("Century Schoolbook", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(130, 358);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.Size = new System.Drawing.Size(155, 28);
             this.button1.TabIndex = 14;
             this.button1.Text = "Individual chat";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 312);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(693, 445);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.label1);
@@ -125,9 +150,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.btnConnect);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
             this.Load += new System.EventHandler(this.frm1_Load);
             this.ResumeLayout(false);
