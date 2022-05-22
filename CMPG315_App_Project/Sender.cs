@@ -129,30 +129,30 @@ namespace CMPG315_App_Project
             }
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            /* client = new TcpClient();
-             IPEndPoint IpEnd = new IPEndPoint(IPAddress.Parse(tbxCleintIP.Text), int.Parse(tbxClientPort.Text));
-             try
-             {
-                 tbxScreen.AppendText("Connecting.....");
-                 client.Connect(IpEnd);
-                 if (client.Connected)
-                 {
-                     tbxScreen.AppendText("Connected to server");
-                     STR = new StreamReader(client.GetStream());
-                     STW = new StreamWriter(client.GetStream());
-                     STW.AutoFlush = true;
-                     backgroundWorker1.RunWorkerAsync();
-                     backgroundWorker2.WorkerSupportsCancellation = true;
-                 }
-             }
-             catch (Exception)
-             {
-                 MessageBox.Show("Lost connection");
-             }
-             */
-        }
+        /* private void btnConnect_Click(object sender, EventArgs e)
+         {
+              client = new TcpClient();
+              IPEndPoint IpEnd = new IPEndPoint(IPAddress.Parse(tbxCleintIP.Text), int.Parse(tbxClientPort.Text));
+              try
+              {
+                  tbxScreen.AppendText("Connecting.....");
+                  client.Connect(IpEnd);
+                  if (client.Connected)
+                  {
+                      tbxScreen.AppendText("Connected to server");
+                      STR = new StreamReader(client.GetStream());
+                      STW = new StreamWriter(client.GetStream());
+                      STW.AutoFlush = true;
+                      backgroundWorker1.RunWorkerAsync();
+                      backgroundWorker2.WorkerSupportsCancellation = true;
+                  }
+              }
+              catch (Exception)
+              {
+                  MessageBox.Show("Lost connection");
+              }
+              
+    }*/
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
