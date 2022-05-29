@@ -102,7 +102,6 @@
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(361, 19);
             this.txtIP.TabIndex = 13;
-            this.txtIP.Text = "192.168.0.3:9000";
             this.txtIP.TextChanged += new System.EventHandler(this.txtIP_TextChanged);
             // 
             // label1
@@ -142,7 +141,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.btnConnect);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -15,6 +15,8 @@ namespace CMPG315_App_Project
 {
     public partial class Sender : Form
     {
+        // remarks code is an other way to send a message and that a sender and receiver can connect
+
         /* private TcpClient client;
          public StreamReader STR;
          public StreamWriter STW;
@@ -42,7 +44,6 @@ namespace CMPG315_App_Project
             Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
             txtServerIP.Text = getLocalIP();
-            tbxCleintIP.Text = getLocalIP();
         }
 
         private string getLocalIP()

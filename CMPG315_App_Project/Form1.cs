@@ -24,13 +24,33 @@ namespace CMPG315_App_Project
 
         private void frm1_Load(object sender, EventArgs e)
         {
+            var bCheck = isIP();
+
+            if (bCheck == false)
+            {
+                MessageBox.Show("Please enter an IP address");
+            }
+            else
+            {
+                client = new SimpleTcpClient(txtIP.Text);
+                client.Events.Connected += Events_Connected;
+                client.Events.Disconnected += Events_Disconnected;
+                client.Events.DataReceived += Events_dataReceived;
+                btnSend.Enabled = false;
+            }
             
-            
-            client = new SimpleTcpClient(txtIP.Text);
-            client.Events.Connected += Events_Connected;
-            client.Events.Disconnected += Events_Disconnected;
-            client.Events.DataReceived += Events_dataReceived;
-            btnSend.Enabled = false;
+        }
+        
+        private bool isIP ()
+        {
+            if (txtIP.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void Events_dataReceived(object sender, DataReceivedEventArgs e)
@@ -63,6 +83,7 @@ namespace CMPG315_App_Project
         {
             try
             {
+                frm1_Load(sender, e);
                 client.Connect();
                 btnSend.Enabled = true;
                 btnConnect.Enabled = false;
